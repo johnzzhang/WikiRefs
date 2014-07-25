@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App2</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- App2 references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <h1>WikiRefs</h1>
+
+    <div id="search">
+        <input id="selectedArticle" type="url" />
+
+        <button id="find" type="submit">Find Refs!</button>
+
+        <div id="tmplReference"
+             data-win-control="WinJS.Binding.Template">
+            <div class="referenceItem">
+                <span data-win-bind="innerHTML:reference"></span>
+            </div>
+        </div>
+
+        <div id="lvReferences"
+             data-win-control="WinJS.UI.ListView"
+             data-win-options="{
+                layout: { type: WinJS.UI.ListLayout },
+                itemTemplate: tmplReference
+        }"></div>
+    </div>
+
+    <div id="info">
+    
+    </div>
+</body>
+</html>

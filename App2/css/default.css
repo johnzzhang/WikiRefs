@@ -1,0 +1,15 @@
+﻿body {
+    padding: 10px;
+}
+
+#lvReferences {
+    height: 900px;
+}
+
+#lvReferences .referenceItem {
+    border: solid 1px white;
+    padding: 10px;
+    width: 300px;
+    overflow-y: scroll;
+    height: 90px;
+}
